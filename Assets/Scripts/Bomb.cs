@@ -19,13 +19,14 @@ public class Bomb : MonoBehaviour
             obj.gameObject.GetComponent<CarControll>().durability -= bombDmg;
             Destroy(this.gameObject);
         }
-        else if (obj.gameObject.tag == "Shield")
-        {
-            Destroy(this.gameObject);
-        }
         else if (obj.gameObject.tag == "EndOfRoad")
         {
             Destroy(this.gameObject);
         }
+        else if (obj.gameObject.tag == "Shield")
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 }
