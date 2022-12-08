@@ -10,6 +10,7 @@ public class Shield : MonoBehaviour
     {
         shieldDuration -= Time.deltaTime;
 
+//shild destruction
         if (shieldDuration <= 0)
         {
             this.gameObject.transform.parent.tag = "Player";
