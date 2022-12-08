@@ -30,6 +30,19 @@ public class Bonuses : MonoBehaviour
         this.gameObject.transform.Translate(new Vector3(0, -1, 0) * bonusSpeed * Time.deltaTime); //go down with road.
     }
 
+        IEnumerator SpeedBoostActivated()
+    {
+        while(duration > 0)
+        {
+            duration -= Time.deltaTime / speedBoost;
+            Time.timeScale = speedBoost;
+            yield return null;
+        }
+
+        Time.timeScale = 1f;
+        Destroy(this.gameObject);
+    }
+
     private void OnTriggerEnter2D(Collider2D obj)
     {
         if (obj.gameObject.tag == "Player" || obj.gameObject.tag == "Shield")
@@ -60,16 +73,5 @@ public class Bonuses : MonoBehaviour
         }
     }
 
-    IEnumerator SpeedBoostActivated()
-    {
-        while(duration > 0)
-        {
-            duration -= Time.deltaTime / speedBoost;
-            Time.timeScale = speedBoost;
-            yield return null;
-        }
 
-        Time.timeScale = 1f;
-        Destroy(this.gameObject);
-    }
 }
