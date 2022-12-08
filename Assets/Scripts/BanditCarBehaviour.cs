@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BanditCarBehaviour : MonoBehaviour 
 {
+
     public GameObject bomb;
     public int bombsAmount;
     public int banditCarVerticalSpeed;
@@ -42,6 +43,7 @@ public class BanditCarBehaviour : MonoBehaviour
             {
                 _banditCarPosition = Vector3.Lerp(transform.position, _playerCar.transform.position, Time.fixedDeltaTime * banditCarHorizontalSpeed);
                 //our position, object to follow position, time.
+
 
                 transform.position = new Vector3(_banditCarPosition.x, transform.position.y, 0);
 
