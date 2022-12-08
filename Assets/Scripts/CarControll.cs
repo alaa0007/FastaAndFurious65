@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//car controll scirpt
+
 public class CarControll : MonoBehaviour 
 {
     public float carHorizontalSpeed;
