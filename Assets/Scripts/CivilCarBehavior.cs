@@ -22,7 +22,6 @@ public class CivilCarBehavior : MonoBehaviour
             obj.gameObject.GetComponent<CarControll>().durability -= crashDamage;
 
             Debug.Log("Civil car colision");
-
             Destroy(this.gameObject);
         }
 
